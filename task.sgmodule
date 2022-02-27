@@ -2,10 +2,18 @@
 #!desc=签到、提醒等定时任务
 
 [MITM]
-hostname = trade-acs.m.taobao.com, api.m.jd.com, *.bilibili.com, music.163.com, act.10010.com, m.client.10010.com, wapside.189.cn:9001, ifac*.iqiyi.com, nebula.kuaishou.com, mp.weixin.qq.com, ms.jr.jd.com
+hostname = %APPEND% passport.iqiyi.com, api.m.jd.com, ms.jr.jd.com, me-api.jd.com,mall.meituan.com, maicai.api.ddxq.mobi,113.96.156.178, *.ximalaya.com,*.video.qq.com
 
 [Script]
-京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-Bilibili签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0
-网易云签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js,script-update-interval=0
-爱奇艺签到 = type=cron,cronexp=11 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+
+美团买菜_签到 = type=cron,cronexp=30 0 * * *,timeout=30,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/meituan/maicai_checkin.js
+
+京东多合_签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+爱奇艺_签到 = type=cron,cronexp=11 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+
+叮咚买菜_签到 = type=cron,cronexp=20 0 * * *,timeout=30,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
+
+喜马拉雅_签到 = type=cron,cronexp=4 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.js,wake-system=true
+
+腾讯视频_签到 = type=cron,cronexp=3 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js
