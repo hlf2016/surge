@@ -10,10 +10,8 @@ var body = JSON.parse($response.body);
 var sign = body['sign'];
 // 将sign分割成数组 取中间那段
 var encodeData = sign.split('.')[1];
-console.log(encodeData);
 // 将 encodeData 进行 base64 解码
 var decodeData = Base64.decode(encodeData);
-console.log(decodeData);
 
 for (var i = 0; i < decodeData.data.length; i++) {
   decodeData['data'][i]['has_bought'] = true;
@@ -22,8 +20,5 @@ for (var i = 0; i < decodeData.data.length; i++) {
 // var encodeData = Base64.encode(decodeData);
 // // 将 encodeData 重新拼接到 sign 中
 // var sign = sign.split('.')[0] + '.' + encodeData + '.' + sign.split('.')[2];
-
-var obj = { "data": decodeData };
-console.log(obj)
 
 $done({ body: JSON.stringify(decodeData) });
