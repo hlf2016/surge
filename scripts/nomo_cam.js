@@ -16,6 +16,7 @@ var encodeData = Base64.encode(decodeData);
 var sign = sign.split('.')[0] + '.' + encodeData + '.' + sign.split('.')[2];
 
 var obj = { "sign": sign };
+console.log(obj)
 
 $done({ body: JSON.stringify(obj) });
 
