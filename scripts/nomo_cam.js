@@ -15,6 +15,7 @@ var decodeData = JSON.parse(Base64.decode(encodeData));
 
 for (var i = 0; i < decodeData.data.length; i++) {
   decodeData['data'][i]['has_bought'] = true;
+  decodeData['data'][i]['vip_only'] = false;
 }
 // 将 decodeData 进行 base64 编码
 var encodeData = Base64.encode(JSON.stringify(decodeData));
