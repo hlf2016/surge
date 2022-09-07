@@ -11,7 +11,7 @@ var sign = body['sign'];
 // 将sign分割成数组 取中间那段
 var encodeData = sign.split('.')[1];
 // 将 encodeData 进行 base64 解码
-var decodeData = Base64.decode(encodeData);
+var decodeData = JSON.parse(Base64.decode(encodeData));
 
 // for (var i = 0; i < 52; i++) {
 //   decodeData['data'][i]['has_bought'] = true;
@@ -24,6 +24,6 @@ var decodeData = Base64.decode(encodeData);
 // body['sign'] = sign;
 
 
-$notification.post('test', '', JSON.stringify(decodeData['data']))
+$notification.post('test', '', JSON.stringify(decodeData.data))
 
 $done({ body: decodeData });
