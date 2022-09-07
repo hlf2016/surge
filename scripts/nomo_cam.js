@@ -14,14 +14,14 @@ console.log(encodeData);
 // 将 encodeData 进行 base64 解码
 var decodeData = Base64.decode(encodeData);
 console.log(decodeData);
-return;
-for (var i = 0; i < decodeData.data.length; i++) {
-  decodeData['data'][i]['has_bought'] = true;
-}
-// 将 decodeData 进行 base64 编码
-var encodeData = Base64.encode(decodeData);
-// 将 encodeData 重新拼接到 sign 中
-var sign = sign.split('.')[0] + '.' + encodeData + '.' + sign.split('.')[2];
+
+// for (var i = 0; i < decodeData.data.length; i++) {
+//   decodeData['data'][i]['has_bought'] = true;
+// }
+// // 将 decodeData 进行 base64 编码
+// var encodeData = Base64.encode(decodeData);
+// // 将 encodeData 重新拼接到 sign 中
+// var sign = sign.split('.')[0] + '.' + encodeData + '.' + sign.split('.')[2];
 
 var obj = { "sign": sign };
 console.log(obj)
