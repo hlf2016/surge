@@ -16,14 +16,13 @@ var decodeData = JSON.parse(Base64.decode(encodeData));
 for (var i = 0; i < decodeData.data.length; i++) {
   decodeData['data'][i]['has_bought'] = true;
 }
-// // 将 decodeData 进行 base64 编码
-// var encodeData = Base64.encode(JSON.stringify(decodeData));
-// // 将 encodeData 重新拼接到 sign 中
-// var sign = sign.split('.')[0] + '.' + encodeData + '.' + sign.split('.')[2];
+// 将 decodeData 进行 base64 编码
+var encodeData = Base64.encode(JSON.stringify(decodeData));
+// 将 encodeData 重新拼接到 sign 中
+var newSign = sign.split('.')[0] + '.' + encodeData + '.' + sign.split('.')[2];
 
-// body['sign'] = sign;
+body['sign'] = newSign;
 
+// $notification.post('test', '', JSON.stringify(decodeData.data))
 
-$notification.post('test', '', JSON.stringify(decodeData.data))
-
-$done({ body: decodeData });
+$done({ body: JSON.stringify(body) });
