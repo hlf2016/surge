@@ -21,4 +21,4 @@ for (var i = 0; i < decodeData.data.length; i++) {
 // // 将 encodeData 重新拼接到 sign 中
 // var sign = sign.split('.')[0] + '.' + encodeData + '.' + sign.split('.')[2];
 
-$done({ body: JSON.stringify(decodeData) });
+$done({ body: JSON.stringify(decodeData.data) });
