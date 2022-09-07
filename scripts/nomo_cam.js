@@ -13,14 +13,14 @@ var encodeData = sign.split('.')[1];
 // 将 encodeData 进行 base64 解码
 var decodeData = Base64.decode(encodeData);
 
-for (var i = 0; i < decodeData['data'].length; i++) {
+for (var i = 0; i < 52; i++) {
   decodeData['data'][i]['has_bought'] = true;
 }
-// 将 decodeData 进行 base64 编码
-var encodeData = Base64.encode(decodeData);
-// 将 encodeData 重新拼接到 sign 中
-var sign = sign.split('.')[0] + '.' + encodeData + '.' + sign.split('.')[2];
+// // 将 decodeData 进行 base64 编码
+// var encodeData = Base64.encode(decodeData);
+// // 将 encodeData 重新拼接到 sign 中
+// var sign = sign.split('.')[0] + '.' + encodeData + '.' + sign.split('.')[2];
 
-body['sign'] = sign;
+// body['sign'] = sign;
 
-$done({ body: body });
+$done({ body: decodeData });
