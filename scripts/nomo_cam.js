@@ -23,7 +23,7 @@ console.log(decodeData);
 // // 将 encodeData 重新拼接到 sign 中
 // var sign = sign.split('.')[0] + '.' + encodeData + '.' + sign.split('.')[2];
 
-var obj = { "sign": sign };
+var obj = { "data": decodeData };
 console.log(obj)
 
-$done({ body: JSON.stringify(obj) });
+$done({ body: JSON.stringify(decodeData) });
