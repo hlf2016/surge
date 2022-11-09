@@ -2,7 +2,7 @@
 #!desc=签到、提醒等定时任务
 
 [MITM]
-hostname = %APPEND% passport.iqiyi.com, api.m.jd.com, ms.jr.jd.com, me-api.jd.com,mall.meituan.com, maicai.api.ddxq.mobi,113.96.156.178, *.ximalaya.com,*.video.qq.com,nomo.dafork.com
+hostname = %APPEND% passport.iqiyi.com, api.m.jd.com, ms.jr.jd.com, me-api.jd.com,mall.meituan.com, maicai.api.ddxq.mobi,113.96.156.178, *.video.qq.com,mobile.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64
 
 [Script]
 
