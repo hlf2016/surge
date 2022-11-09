@@ -14,8 +14,6 @@ hostname = %APPEND% passport.iqiyi.com, api.m.jd.com, ms.jr.jd.com, me-api.jd.co
 
 叮咚买菜_签到 = type=cron,cronexp=20 0 * * *,timeout=30,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
 
-喜马拉雅_签到 = type=cron,cronexp=4 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.js,wake-system=true
-
 腾讯视频_签到 = type=cron,cronexp=3 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js
 
-nomo_cam_pro = type=http-response,pattern=^https:\/\/nomo\.dafork\.com\/api\/v5\/iap\/ios_product_list\?,requires-body=1,max-size=0,timeout=40,script-path=https://raw.githubusercontent.com/hlf2016/surge/main/scripts/nomo_cam.js
+喜马拉雅签到任务 = type=cron,cronexp=35 8 * * *,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js,timeout=15
