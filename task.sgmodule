@@ -2,15 +2,11 @@
 #!desc=签到、提醒等定时任务
 
 [MITM]
-hostname = %APPEND% passport.iqiyi.com, api.m.jd.com, ms.jr.jd.com, me-api.jd.com,mall.meituan.com, maicai.api.ddxq.mobi,113.96.156.178, *.video.qq.com
+hostname = %APPEND% passport.iqiyi.com,mall.meituan.com, maicai.api.ddxq.mobi,113.96.156.178
 [Script]
 
-美团买菜_签到 = type=cron,cronexp=30 0 * * *,timeout=30,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/meituan/maicai_checkin.js
-
-京东多合_签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+美团买菜_签到 = type=cron,cronexp="0 6,8 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.mallcoin.task.js,script-update-interval=0
 
 爱奇艺_签到 = type=cron,cronexp=11 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
 叮咚买菜_签到 = type=cron,cronexp=20 0 * * *,timeout=30,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
-
-腾讯视频_签到 = type=cron,cronexp=3 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js
